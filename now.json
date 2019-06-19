@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./backend/package.json",
+      "use": "@now/node-server"
+    },
+    {
+      "src": "./frontend/package.json",
+      "use": "@now/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/frontend",
+      "dest": "/frontend/$1"
+    },
+    {
+      "src": "/backend",
+      "dest": "/backend/$1"
+    }
+  ],
+  "env": {
+    "FRONTEND_URL": "http://sick-fits.brunocrosier.now.sh",
+    "PRISMA_ENDPOINT": "https://sick-fits-prod-e2a10f610f.herokuapp.com/production-sick-fits/staging",
+    "PRISMA_SECRET": "hd*DSGhdgsq838gdhsDJGsdjg",
+    "APP_SECRET": "jwtsecret123",
+    "STRIPE_SECRET": "sk_test_LEvTmw3O3aJH8VAIoB5thbw200SIzKZZvg",
+    "PORT": "4444",
+    "MAIL_HOST": "smtp.mailtrap.io",
+    "MAIL_PORT": "2525",
+    "MAIL_USER": "21e684fe4251e2",
+    "MAIL_PASS": "7ca3afb537a1da"
+  }
+}
