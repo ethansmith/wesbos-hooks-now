@@ -1,24 +1,17 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-import { ApolloLink } from 'apollo-link';
-import { SubscriptionClient } from 'subscriptions-transport-ws';
-var WebSocketLink = /** @class */ (function (_super) {
-    __extends(WebSocketLink, _super);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var tslib_1 = require("tslib");
+var apollo_link_1 = require("apollo-link");
+var subscriptions_transport_ws_1 = require("subscriptions-transport-ws");
+var WebSocketLink = (function (_super) {
+    tslib_1.__extends(WebSocketLink, _super);
     function WebSocketLink(paramsOrClient) {
         var _this = _super.call(this) || this;
-        if (paramsOrClient instanceof SubscriptionClient) {
+        if (paramsOrClient instanceof subscriptions_transport_ws_1.SubscriptionClient) {
             _this.subscriptionClient = paramsOrClient;
         }
         else {
-            _this.subscriptionClient = new SubscriptionClient(paramsOrClient.uri, paramsOrClient.options, paramsOrClient.webSocketImpl);
+            _this.subscriptionClient = new subscriptions_transport_ws_1.SubscriptionClient(paramsOrClient.uri, paramsOrClient.options, paramsOrClient.webSocketImpl);
         }
         return _this;
     }
@@ -26,6 +19,6 @@ var WebSocketLink = /** @class */ (function (_super) {
         return this.subscriptionClient.request(operation);
     };
     return WebSocketLink;
-}(ApolloLink));
-export { WebSocketLink };
+}(apollo_link_1.ApolloLink));
+exports.WebSocketLink = WebSocketLink;
 //# sourceMappingURL=webSocketLink.js.map

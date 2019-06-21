@@ -1,5 +1,5 @@
-# source: https://eu1.prisma.sh/bruno-crosier-69a2db/new-sick-fits/dev
-# timestamp: Sat Jun 15 2019 11:58:38 GMT+0100 (British Summer Time)
+# source: https://sick-fits-prod-4da5d2565b.herokuapp.com/back/pro
+# timestamp: Thu Jun 20 2019 20:17:21 GMT+0100 (British Summer Time)
 
 type AggregateCartItem {
   count: Int!
@@ -172,9 +172,7 @@ input CartItemSubscriptionWhereInput {
   """Logical NOT on all given filters combined by AND."""
   NOT: [CartItemSubscriptionWhereInput!]
 
-  """
-  The subscription event gets dispatched when it's listed in mutation_in
-  """
+  """The subscription event gets dispatched when it's listed in mutation_in"""
   mutation_in: [MutationType!]
 
   """
@@ -415,9 +413,7 @@ input ItemSubscriptionWhereInput {
   """Logical NOT on all given filters combined by AND."""
   NOT: [ItemSubscriptionWhereInput!]
 
-  """
-  The subscription event gets dispatched when it's listed in mutation_in
-  """
+  """The subscription event gets dispatched when it's listed in mutation_in"""
   mutation_in: [MutationType!]
 
   """
@@ -835,7 +831,19 @@ input OrderCreateInput {
   total: Int!
   charge: String!
   items: OrderItemCreateManyInput
-  user: UserCreateOneInput!
+  user: UserCreateOneWithoutOrdersInput!
+}
+
+input OrderCreateManyWithoutUserInput {
+  create: [OrderCreateWithoutUserInput!]
+  connect: [OrderWhereUniqueInput!]
+}
+
+input OrderCreateWithoutUserInput {
+  id: ID
+  total: Int!
+  charge: String!
+  items: OrderItemCreateManyInput
 }
 
 """An edge in a connection."""
@@ -1192,9 +1200,7 @@ input OrderItemSubscriptionWhereInput {
   """Logical NOT on all given filters combined by AND."""
   NOT: [OrderItemSubscriptionWhereInput!]
 
-  """
-  The subscription event gets dispatched when it's listed in mutation_in
-  """
+  """The subscription event gets dispatched when it's listed in mutation_in"""
   mutation_in: [MutationType!]
 
   """
@@ -1561,6 +1567,163 @@ type OrderPreviousValues {
   updatedAt: DateTime!
 }
 
+input OrderScalarWhereInput {
+  """Logical AND on all given filters."""
+  AND: [OrderScalarWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [OrderScalarWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [OrderScalarWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
+  total: Int
+
+  """All values that are not equal to given value."""
+  total_not: Int
+
+  """All values that are contained in given list."""
+  total_in: [Int!]
+
+  """All values that are not contained in given list."""
+  total_not_in: [Int!]
+
+  """All values less than the given value."""
+  total_lt: Int
+
+  """All values less than or equal the given value."""
+  total_lte: Int
+
+  """All values greater than the given value."""
+  total_gt: Int
+
+  """All values greater than or equal the given value."""
+  total_gte: Int
+  charge: String
+
+  """All values that are not equal to given value."""
+  charge_not: String
+
+  """All values that are contained in given list."""
+  charge_in: [String!]
+
+  """All values that are not contained in given list."""
+  charge_not_in: [String!]
+
+  """All values less than the given value."""
+  charge_lt: String
+
+  """All values less than or equal the given value."""
+  charge_lte: String
+
+  """All values greater than the given value."""
+  charge_gt: String
+
+  """All values greater than or equal the given value."""
+  charge_gte: String
+
+  """All values containing the given string."""
+  charge_contains: String
+
+  """All values not containing the given string."""
+  charge_not_contains: String
+
+  """All values starting with the given string."""
+  charge_starts_with: String
+
+  """All values not starting with the given string."""
+  charge_not_starts_with: String
+
+  """All values ending with the given string."""
+  charge_ends_with: String
+
+  """All values not ending with the given string."""
+  charge_not_ends_with: String
+  createdAt: DateTime
+
+  """All values that are not equal to given value."""
+  createdAt_not: DateTime
+
+  """All values that are contained in given list."""
+  createdAt_in: [DateTime!]
+
+  """All values that are not contained in given list."""
+  createdAt_not_in: [DateTime!]
+
+  """All values less than the given value."""
+  createdAt_lt: DateTime
+
+  """All values less than or equal the given value."""
+  createdAt_lte: DateTime
+
+  """All values greater than the given value."""
+  createdAt_gt: DateTime
+
+  """All values greater than or equal the given value."""
+  createdAt_gte: DateTime
+  updatedAt: DateTime
+
+  """All values that are not equal to given value."""
+  updatedAt_not: DateTime
+
+  """All values that are contained in given list."""
+  updatedAt_in: [DateTime!]
+
+  """All values that are not contained in given list."""
+  updatedAt_not_in: [DateTime!]
+
+  """All values less than the given value."""
+  updatedAt_lt: DateTime
+
+  """All values less than or equal the given value."""
+  updatedAt_lte: DateTime
+
+  """All values greater than the given value."""
+  updatedAt_gt: DateTime
+
+  """All values greater than or equal the given value."""
+  updatedAt_gte: DateTime
+}
+
 type OrderSubscriptionPayload {
   mutation: MutationType!
   node: Order
@@ -1578,9 +1741,7 @@ input OrderSubscriptionWhereInput {
   """Logical NOT on all given filters combined by AND."""
   NOT: [OrderSubscriptionWhereInput!]
 
-  """
-  The subscription event gets dispatched when it's listed in mutation_in
-  """
+  """The subscription event gets dispatched when it's listed in mutation_in"""
   mutation_in: [MutationType!]
 
   """
@@ -1604,12 +1765,51 @@ input OrderUpdateInput {
   total: Int
   charge: String
   items: OrderItemUpdateManyInput
-  user: UserUpdateOneRequiredInput
+  user: UserUpdateOneRequiredWithoutOrdersInput
+}
+
+input OrderUpdateManyDataInput {
+  total: Int
+  charge: String
 }
 
 input OrderUpdateManyMutationInput {
   total: Int
   charge: String
+}
+
+input OrderUpdateManyWithoutUserInput {
+  create: [OrderCreateWithoutUserInput!]
+  connect: [OrderWhereUniqueInput!]
+  set: [OrderWhereUniqueInput!]
+  disconnect: [OrderWhereUniqueInput!]
+  delete: [OrderWhereUniqueInput!]
+  update: [OrderUpdateWithWhereUniqueWithoutUserInput!]
+  updateMany: [OrderUpdateManyWithWhereNestedInput!]
+  deleteMany: [OrderScalarWhereInput!]
+  upsert: [OrderUpsertWithWhereUniqueWithoutUserInput!]
+}
+
+input OrderUpdateManyWithWhereNestedInput {
+  where: OrderScalarWhereInput!
+  data: OrderUpdateManyDataInput!
+}
+
+input OrderUpdateWithoutUserDataInput {
+  total: Int
+  charge: String
+  items: OrderItemUpdateManyInput
+}
+
+input OrderUpdateWithWhereUniqueWithoutUserInput {
+  where: OrderWhereUniqueInput!
+  data: OrderUpdateWithoutUserDataInput!
+}
+
+input OrderUpsertWithWhereUniqueWithoutUserInput {
+  where: OrderWhereUniqueInput!
+  update: OrderUpdateWithoutUserDataInput!
+  create: OrderCreateWithoutUserInput!
 }
 
 input OrderWhereInput {
@@ -1842,6 +2042,7 @@ type User implements Node {
   resetTokenExpiry: String
   permissions: [Permission!]!
   cart(where: CartItemWhereInput, orderBy: CartItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [CartItem!]
+  orders(where: OrderWhereInput, orderBy: OrderOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Order!]
 }
 
 """A connection to a list of items."""
@@ -1863,6 +2064,7 @@ input UserCreateInput {
   resetTokenExpiry: String
   permissions: UserCreatepermissionsInput
   cart: CartItemCreateManyWithoutUserInput
+  orders: OrderCreateManyWithoutUserInput
 }
 
 input UserCreateOneInput {
@@ -1872,6 +2074,11 @@ input UserCreateOneInput {
 
 input UserCreateOneWithoutCartInput {
   create: UserCreateWithoutCartInput
+  connect: UserWhereUniqueInput
+}
+
+input UserCreateOneWithoutOrdersInput {
+  create: UserCreateWithoutOrdersInput
   connect: UserWhereUniqueInput
 }
 
@@ -1887,6 +2094,18 @@ input UserCreateWithoutCartInput {
   resetToken: String
   resetTokenExpiry: String
   permissions: UserCreatepermissionsInput
+  orders: OrderCreateManyWithoutUserInput
+}
+
+input UserCreateWithoutOrdersInput {
+  id: ID
+  name: String!
+  email: String!
+  password: String!
+  resetToken: String
+  resetTokenExpiry: String
+  permissions: UserCreatepermissionsInput
+  cart: CartItemCreateManyWithoutUserInput
 }
 
 """An edge in a connection."""
@@ -1940,9 +2159,7 @@ input UserSubscriptionWhereInput {
   """Logical NOT on all given filters combined by AND."""
   NOT: [UserSubscriptionWhereInput!]
 
-  """
-  The subscription event gets dispatched when it's listed in mutation_in
-  """
+  """The subscription event gets dispatched when it's listed in mutation_in"""
   mutation_in: [MutationType!]
 
   """
@@ -1970,6 +2187,7 @@ input UserUpdateDataInput {
   resetTokenExpiry: String
   permissions: UserUpdatepermissionsInput
   cart: CartItemUpdateManyWithoutUserInput
+  orders: OrderUpdateManyWithoutUserInput
 }
 
 input UserUpdateInput {
@@ -1980,6 +2198,7 @@ input UserUpdateInput {
   resetTokenExpiry: String
   permissions: UserUpdatepermissionsInput
   cart: CartItemUpdateManyWithoutUserInput
+  orders: OrderUpdateManyWithoutUserInput
 }
 
 input UserUpdateManyMutationInput {
@@ -2014,6 +2233,13 @@ input UserUpdateOneRequiredWithoutCartInput {
   upsert: UserUpsertWithoutCartInput
 }
 
+input UserUpdateOneRequiredWithoutOrdersInput {
+  create: UserCreateWithoutOrdersInput
+  connect: UserWhereUniqueInput
+  update: UserUpdateWithoutOrdersDataInput
+  upsert: UserUpsertWithoutOrdersInput
+}
+
 input UserUpdatepermissionsInput {
   set: [Permission!]
 }
@@ -2025,6 +2251,17 @@ input UserUpdateWithoutCartDataInput {
   resetToken: String
   resetTokenExpiry: String
   permissions: UserUpdatepermissionsInput
+  orders: OrderUpdateManyWithoutUserInput
+}
+
+input UserUpdateWithoutOrdersDataInput {
+  name: String
+  email: String
+  password: String
+  resetToken: String
+  resetTokenExpiry: String
+  permissions: UserUpdatepermissionsInput
+  cart: CartItemUpdateManyWithoutUserInput
 }
 
 input UserUpsertNestedInput {
@@ -2035,6 +2272,11 @@ input UserUpsertNestedInput {
 input UserUpsertWithoutCartInput {
   update: UserUpdateWithoutCartDataInput!
   create: UserCreateWithoutCartInput!
+}
+
+input UserUpsertWithoutOrdersInput {
+  update: UserUpdateWithoutOrdersDataInput!
+  create: UserCreateWithoutOrdersInput!
 }
 
 input UserWhereInput {
@@ -2289,6 +2531,9 @@ input UserWhereInput {
   cart_every: CartItemWhereInput
   cart_some: CartItemWhereInput
   cart_none: CartItemWhereInput
+  orders_every: OrderWhereInput
+  orders_some: OrderWhereInput
+  orders_none: OrderWhereInput
 }
 
 input UserWhereUniqueInput {

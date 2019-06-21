@@ -70,7 +70,7 @@ const CreateItem = props => {
             const res = await createItem({
               variables: {
                 title: theTitle,
-                price: thePrice,
+                price: parseInt(thePrice),
                 description: theDescription,
                 image: theImage,
                 largeImage: theLargeImage

@@ -233,17 +233,17 @@ ReactDOM.render(
 # API Docs
 
 ## SubscriptionClient
-### `Constructor(url, options, connectionCallback)`
+### `Constructor(url, options, webSocketImpl)`
 - `url: string` : url that the client will connect to, starts with `ws://` or `wss://`
 - `options?: Object` : optional, object to modify default client behavior
   * `timeout?: number` : how long the client should wait in ms for a keep-alive message from the server (default 30000 ms), this parameter is ignored if the server does not send keep-alive messages. This will also be used to calculate the max connection time per connect/reconnect
   * `lazy?: boolean` : use to set lazy mode - connects only when first subscription created, and delay the socket initialization
-  * `connectionParams?: Object | Function` : object that will be available as first argument of `onConnect` (in server side), if passed a function - it will call it and send the return value
+  * `connectionParams?: Object | Function | Promise<Object>` : object that will be available as first argument of `onConnect` (in server side), if passed a function - it will call it and send the return value, if function returns as promise - it will wait until it resolves and send the resolved value.
   * `reconnect?: boolean` : automatic reconnect in case of connection error
   * `reconnectionAttempts?: number` : how much reconnect attempts
   * `connectionCallback?: (error) => {}` : optional, callback that called after the first init message, with the error (if there is one)
   * `inactivityTimeout?: number` : how long the client should wait in ms, when there are no active subscriptions, before disconnecting from the server. Set to 0 to disable this behavior. (default 0)
-- `webSocketImpl?: Object` - optional, WebSocket implementation. use this when your environment does not have a built-in native WebSocket (for example, with NodeJS client)
+- `webSocketImpl?: Object` - optional, constructor for W3C compliant WebSocket implementation. Use this when your environment does not have a built-in native WebSocket (for example, with NodeJS client)
 
 ### Methods
 #### `request(options) => Observable<ExecutionResult>`: returns observable to execute the operation.
@@ -300,28 +300,29 @@ ReactDOM.render(
 
 
 ## SubscriptionServer
-### `Constructor(options, socketOptions)`
+### `Constructor(options, socketOptions | socketServer)`
 - `options: {ServerOptions}`
   * `rootValue?: any` : Root value to use when executing GraphQL root operations
-  * `schema?: GraphQLSchema` : GraphQL schema object
+  * `schema?: GraphQLSchema` : GraphQL schema object. If not provided, you have to return the schema as a property on the object returned from `onOperation`.
   * `execute?: (schema, document, rootValue, contextValue, variableValues, operationName) => Promise<ExecutionResult> | AsyncIterator<ExecutionResult>` : GraphQL `execute` function, provide the default one from `graphql` package. Return value of `AsyncItrator` is also valid since this package also support reactive `execute` methods.
   * `subscribe?: (schema, document, rootValue, contextValue, variableValues, operationName) => Promise<ExecutionResult | AsyncIterator<ExecutionResult>>` : GraphQL `subscribe` function, provide the default one from `graphql` package.
-  * `onOperation?: (message: SubscribeMessage, params: SubscriptionOptions, webSocket: WebSocket)` : optional method to create custom params that will be used when resolving this operation
-  * `onOperationComplete?: (webSocket: WebSocket, opId: string)` : optional method that called when a GraphQL operation is done (for query and mutation it's immeditaly, and for subscriptions when unsubscribing)
+  * `onOperation?: (message: SubscribeMessage, params: SubscriptionOptions, webSocket: WebSocket)` : optional method to create custom params that will be used when resolving this operation. It can also be used to dynamically resolve the schema that will be used for the particular operation.
+  * `onOperationComplete?: (webSocket: WebSocket, opId: string)` : optional method that called when a GraphQL operation is done (for query and mutation it's immediately, and for subscriptions when unsubscribing)
   * `onConnect?: (connectionParams: Object, webSocket: WebSocket, context: ConnectionContext)` : optional method that called when a client connects to the socket, called with the `connectionParams` from the client, if the return value is an object, its elements will be added to the context. return `false` or throw an exception to reject the connection. May return a Promise.
   * `onDisconnect?: (webSocket: WebSocket, context: ConnectionContext)` : optional method that called when a client disconnects
   * `keepAlive?: number` : optional interval in ms to send `KEEPALIVE` messages to all clients
 
-- `socketOptions: {WebSocket.IServerOptions}` : options to pass to the WebSocket object (full docs [here](https://github.com/websockets/ws/blob/master/doc/ws.md))    
+- `socketOptions: {WebSocket.IServerOptions}` : options to pass to the WebSocket object (full docs [here](https://github.com/websockets/ws/blob/master/doc/ws.md))
   * `server?: HttpServer` - existing HTTP server to use (use without `host`/`port`)
   * `host?: string` - server host
   * `port?: number` - server port
   * `path?: string` - endpoint path
-    
-    
+
+- `socketServer: {WebSocket.Server}` : a configured server if you need more control. Can be used for integration testing with in-memory WebSocket implementation.
+
 ## How it works?
 
-* For GraphQL WebSocket protocol docs, [click here](https://github.com/apollographql/subscriptions-transport-ws/blob/master/PROTOCOL.md)    
+* For GraphQL WebSocket protocol docs, [click here](https://github.com/apollographql/subscriptions-transport-ws/blob/master/PROTOCOL.md)
 * This package also uses `AsyncIterator` internally using [iterall](https://github.com/leebyron/iterall), for more information [click here](https://github.com/ReactiveX/IxJS), or [the proposal](https://github.com/tc39/proposal-async-iteration)
 
 The current version of this transport, also support a previous version of the protocol.

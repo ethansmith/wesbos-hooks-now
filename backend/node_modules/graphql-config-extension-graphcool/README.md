@@ -1,6 +1,6 @@
 # graphql-config-extension-graphcool
 
-[![CircleCI](https://circleci.com/gh/graphcool/graphql-config-extension-graphcool.svg?style=shield)](https://circleci.com/gh/graphcool/graphql-config-extension-graphcool) [![npm version](https://badge.fury.io/js/graphql-config-extension-graphcool.svg)](https://badge.fury.io/js/graphql-config-extension-graphcool)
+[![CircleCI](https://circleci.com/gh/prisma/graphql-config-extension-graphcool.svg?style=shield)](https://circleci.com/gh/prisma/graphql-config-extension-graphcool) [![npm version](https://badge.fury.io/js/graphql-config-extension-graphcool.svg)](https://badge.fury.io/js/graphql-config-extension-graphcool)
 
 Injects endpoints and headers into a GraphQL Config instance based on a given graphcool.yml
 
