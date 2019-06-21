@@ -36024,7 +36024,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 7:
+/***/ 6:
 /*!******************************!*\
   !*** multi ./pages/items.js ***!
   \******************************/
@@ -36049,5 +36049,5 @@ module.exports = dll_84cc4fe3fc17a4546c27;
 
 /***/ })
 
-},[[7,"static/runtime/webpack.js"]]]));;
+},[[6,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=items.js.map

@@ -52,11 +52,13 @@ const CreateItem = props => {
 
     const theFile = await res.json()
 
+    console.log(theFile)
+
     setUploading(false)
 
-    setTheImage(theFile.url)
+    setTheImage(theFile.secure_url)
 
-    setTheLargeImage(theFile.eager[0].url)
+    setTheLargeImage(theFile.eager[0].secure_url)
   }
 
   return (
@@ -77,7 +79,6 @@ const CreateItem = props => {
               }
             })
             // change them to the single item page
-            console.log(res)
             Router.push({
               pathname: "/item",
               query: { id: res.data.createItem.id }

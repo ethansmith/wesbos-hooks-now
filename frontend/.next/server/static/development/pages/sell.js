@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -212,11 +212,12 @@ var CreateItem = function CreateItem(props) {
 
             case 9:
               theFile = _context.sent;
+              console.log(theFile);
               setUploading(false);
-              setTheImage(theFile.url);
-              setTheLargeImage(theFile.eager[0].url);
+              setTheImage(theFile.secure_url);
+              setTheLargeImage(theFile.eager[0].secure_url);
 
-            case 13:
+            case 14:
             case "end":
               return _context.stop();
           }
@@ -233,7 +234,7 @@ var CreateItem = function CreateItem(props) {
     mutation: CREATE_ITEM_MUTATION,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 65
     },
     __self: this
   }, function (createItem, _ref2) {
@@ -268,7 +269,6 @@ var CreateItem = function CreateItem(props) {
                 case 3:
                   res = _context2.sent;
                   // change them to the single item page
-                  console.log(res);
                   next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push({
                     pathname: "/item",
                     query: {
@@ -276,7 +276,7 @@ var CreateItem = function CreateItem(props) {
                     }
                   });
 
-                case 6:
+                case 5:
                 case "end":
                   return _context2.stop();
               }
@@ -290,14 +290,14 @@ var CreateItem = function CreateItem(props) {
       }(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 67
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ErrorMessage__WEBPACK_IMPORTED_MODULE_7__["default"], {
       error: error,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 88
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", {
@@ -305,14 +305,14 @@ var CreateItem = function CreateItem(props) {
       "aria-busy": loading,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89
+        lineNumber: 90
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
       htmlFor: "file",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 90
+        lineNumber: 91
       },
       __self: this
     }, "Image", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -326,13 +326,13 @@ var CreateItem = function CreateItem(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 93
       },
       __self: this
     }), uploading && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
+        lineNumber: 101
       },
       __self: this
     }, "Uploading..."), theImage && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -341,14 +341,14 @@ var CreateItem = function CreateItem(props) {
       alt: "Upload Preview",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 103
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
       htmlFor: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 107
       },
       __self: this
     }, "Title", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -364,14 +364,14 @@ var CreateItem = function CreateItem(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 109
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
       htmlFor: "Price",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 121
       },
       __self: this
     }, "Price", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -386,14 +386,14 @@ var CreateItem = function CreateItem(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122
+        lineNumber: 123
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
       htmlFor: "Description",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133
+        lineNumber: 134
       },
       __self: this
     }, "Description", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", {
@@ -407,14 +407,14 @@ var CreateItem = function CreateItem(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 135
+        lineNumber: 136
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       type: "submit",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144
+        lineNumber: 145
       },
       __self: this
     }, "Submit!")));
@@ -928,7 +928,7 @@ var Sell = function Sell(props) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 7:
 /*!*****************************!*\
   !*** multi ./pages/sell.js ***!
   \*****************************/
