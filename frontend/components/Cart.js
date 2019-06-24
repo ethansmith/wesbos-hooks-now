@@ -9,6 +9,7 @@ import CartItem from "./CartItem"
 import calcTotalPrice from "../lib/calcTotalPrice"
 import formatMoney from "../lib/formatMoney"
 import TakeMyMoney from "./TakeMyMoney"
+import Link from "next/link"
 
 const LOCAL_STATE_QUERY = gql`
   query {
@@ -53,12 +54,16 @@ const Cart = props => (
 
                   <footer>
                     <p>{formatMoney(calcTotalPrice(me.cart))}</p>
-                    {me.cart.length ? (
+                    {/* {me.cart.length ? (
                     <TakeMyMoney>
                       <SickButton>Checkout </SickButton>
                     </TakeMyMoney>
-                    ) : ""
-                  }
+                    ) : "" } */}
+                    <Link href={{pathname: '/checkout'}}>
+                      <SickButton onClick={toggleCart}>
+                        {me.cart.length ? "Checkout" : "Add some items!"}
+                      </SickButton>
+                    </Link>
                   </footer>
                 </CartStyles>
               )}
