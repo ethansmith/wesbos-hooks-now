@@ -37,10 +37,14 @@ server.start(
   {
     cors: {
       credentials: true,
-      origin: process.env.FRONTEND_URL,
+      origin:
+        process.env.NODE_ENV === 'production'
+          ? process.env.PROD_FRONTEND_URL
+          : process.env.LOCAL_FRONTEND_URL,
     },
   },
   deets => {
     console.log(`Server is now running on port http://localhost:${deets.port}`);
+    console.log(process.env.NODE_ENV);
   }
 );

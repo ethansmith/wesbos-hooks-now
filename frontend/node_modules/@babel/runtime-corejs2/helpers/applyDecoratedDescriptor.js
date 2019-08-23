@@ -1,8 +1,14 @@
+var _Object$defineProperty = require("../core-js/object/define-property");
+
+var _Object$keys = require("../core-js/object/keys");
+
 function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
   var desc = {};
-  Object['ke' + 'ys'](descriptor).forEach(function (key) {
+
+  _Object$keys(descriptor).forEach(function (key) {
     desc[key] = descriptor[key];
   });
+
   desc.enumerable = !!desc.enumerable;
   desc.configurable = !!desc.configurable;
 
@@ -20,7 +26,8 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
   }
 
   if (desc.initializer === void 0) {
-    Object['define' + 'Property'](target, property, desc);
+    _Object$defineProperty(target, property, desc);
+
     desc = null;
   }
 

@@ -1,5 +1,3 @@
-var _Symbol$asyncIterator = require("../core-js/symbol/async-iterator");
-
 var _Symbol = require("../core-js/symbol");
 
 var _Promise = require("../core-js/promise");
@@ -81,13 +79,13 @@ function AsyncGenerator(gen) {
 
   this._invoke = send;
 
-  if (typeof gen.return !== "function") {
-    this.return = undefined;
+  if (typeof gen["return"] !== "function") {
+    this["return"] = undefined;
   }
 }
 
-if (typeof _Symbol === "function" && _Symbol$asyncIterator) {
-  AsyncGenerator.prototype[_Symbol$asyncIterator] = function () {
+if (typeof _Symbol === "function" && _Symbol.asyncIterator) {
+  AsyncGenerator.prototype[_Symbol.asyncIterator] = function () {
     return this;
   };
 }
@@ -96,11 +94,11 @@ AsyncGenerator.prototype.next = function (arg) {
   return this._invoke("next", arg);
 };
 
-AsyncGenerator.prototype.throw = function (arg) {
+AsyncGenerator.prototype["throw"] = function (arg) {
   return this._invoke("throw", arg);
 };
 
-AsyncGenerator.prototype.return = function (arg) {
+AsyncGenerator.prototype["return"] = function (arg) {
   return this._invoke("return", arg);
 };
 

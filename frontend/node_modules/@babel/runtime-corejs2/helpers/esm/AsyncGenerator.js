@@ -1,4 +1,3 @@
-import _Symbol$asyncIterator from "../../core-js/symbol/async-iterator";
 import _Symbol from "../../core-js/symbol";
 import _Promise from "../../core-js/promise";
 import AwaitValue from "./AwaitValue";
@@ -77,13 +76,13 @@ export default function AsyncGenerator(gen) {
 
   this._invoke = send;
 
-  if (typeof gen.return !== "function") {
-    this.return = undefined;
+  if (typeof gen["return"] !== "function") {
+    this["return"] = undefined;
   }
 }
 
-if (typeof _Symbol === "function" && _Symbol$asyncIterator) {
-  AsyncGenerator.prototype[_Symbol$asyncIterator] = function () {
+if (typeof _Symbol === "function" && _Symbol.asyncIterator) {
+  AsyncGenerator.prototype[_Symbol.asyncIterator] = function () {
     return this;
   };
 }
@@ -92,10 +91,10 @@ AsyncGenerator.prototype.next = function (arg) {
   return this._invoke("next", arg);
 };
 
-AsyncGenerator.prototype.throw = function (arg) {
+AsyncGenerator.prototype["throw"] = function (arg) {
   return this._invoke("throw", arg);
 };
 
-AsyncGenerator.prototype.return = function (arg) {
+AsyncGenerator.prototype["return"] = function (arg) {
   return this._invoke("return", arg);
 };

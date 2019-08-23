@@ -4,8 +4,16 @@
   "builds": [{ "src": "src/index.js", "use": "@now/node-server" }],
   "routes": [{ "src": "/.*", "dest": "src/index.js" }],
   "env": {
-    "FRONTEND_URL": "https://hooks-frontend.ethansmith.now.sh",
+    "LOCAL_FRONTEND_URL": "http://localhost:7777",
+    "PROD_FRONTEND_URL": "https://hooks-frontend.ethansmith.now.sh",
     "PRISMA_ENDPOINT": "https://hooks-prod-67ab883197.herokuapp.com/hooks-prod/default",
-    "PRISMA_SECRET": "prismatic123"
+    "PRISMA_SECRET": "prismatic123",
+    "APP_SECRET": "jwtsecret123",
+    "STRIPE_SECRET": "sk_test_Lk8SF6kjaZKNRsfGkAt2RlAn00XfUMsYGX",
+    "PORT": "4444",
+    "MAIL_HOST": "smtp.mailtrap.io",
+    "MAIL_PORT": "2525",
+    "MAIL_USER": "cffffafd2adfb7",
+    "MAIL_PASS": "693ff9d66cb3d9"
   }
 }
