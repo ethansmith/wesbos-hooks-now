@@ -3521,10 +3521,10 @@ module.exports = __webpack_require__(/*! ./dist/lib/head */ "./node_modules/next
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./":
-/*!**************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
-  \**************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./":
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3682,13 +3682,13 @@ module.exports = (__webpack_require__(/*! dll-reference dll_1aef2d0bbc0d334d831c
 /***/ }),
 
 /***/ 1:
-/*!******************************************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
-  \******************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
+  \**********************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js!./");
 
 
 /***/ }),

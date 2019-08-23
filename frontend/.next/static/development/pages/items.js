@@ -17,7 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./User */ "./components/User.js");
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/AddToCart.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/AddToCart.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -140,7 +140,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/DeleteItem.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/DeleteItem.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 
 function _templateObject() {
@@ -267,7 +267,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_formatMoney__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/formatMoney */ "./lib/formatMoney.js");
 /* harmony import */ var _DeleteItem__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./DeleteItem */ "./components/DeleteItem.js");
 /* harmony import */ var _AddToCart__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./AddToCart */ "./components/AddToCart.js");
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/Item.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/Item.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -402,7 +402,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Pagination */ "./components/Pagination.js");
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../config */ "./config.js");
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/Items.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/Items.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -522,15 +522,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-apollo */ "./node_modules/react-apollo/react-apollo.esm.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/head */ "./node_modules/next-server/dist/lib/head.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _styles_PaginationStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/PaginationStyles */ "./components/styles/PaginationStyles.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ "./node_modules/next-server/dist/lib/head.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-apollo */ "./node_modules/react-apollo/react-apollo.esm.js");
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../config */ "./config.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _styles_PaginationStyles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles/PaginationStyles */ "./components/styles/PaginationStyles.js");
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/Pagination.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/Pagination.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -553,7 +553,7 @@ function _templateObject() {
 var PAGINATION_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default()(_templateObject());
 
 var Pagination = function Pagination(props) {
-  return __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_3__["Query"], {
+  return __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_5__["Query"], {
     query: PAGINATION_QUERY,
     __source: {
       fileName: _jsxFileName,
@@ -574,13 +574,13 @@ var Pagination = function Pagination(props) {
     var itemsCount = data.itemsConnection.aggregate.count;
     var totalPages = Math.ceil(itemsCount / _config__WEBPACK_IMPORTED_MODULE_6__["perPage"]);
     var currentPage = props.page;
-    return __jsx(_styles_PaginationStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    return __jsx(_styles_PaginationStyles__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 30
       },
       __self: this
-    }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 31
@@ -592,7 +592,7 @@ var Pagination = function Pagination(props) {
         lineNumber: 32
       },
       __self: this
-    }, "Provision - Page ", props.page, " of ", totalPages, ' ')), __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    }, "Sick Fits + - Page ", props.page, " of ", totalPages, ' ')), __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
       prefetch: true,
       href: {
         pathname: 'items',
@@ -625,7 +625,7 @@ var Pagination = function Pagination(props) {
         lineNumber: 52
       },
       __self: this
-    }, itemsCount, " items total"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    }, itemsCount, " items total"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
       prefetch: true,
       href: {
         pathname: 'items',
@@ -675,7 +675,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
 
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/User.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/User.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -821,7 +821,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "perPage", function() { return perPage; });
 // This is client side config only - don't put anything in here that shouldn't be public!
 var LOCAL_BACKEND_URL = "http://localhost:4444";
-var PROD_BACKEND_URL = "https://provision-backend.ethansmith.now.sh";
+var PROD_BACKEND_URL = "https://wesbos-hooks-now-backend.ethansmith.now.sh";
 var perPage = 4;
 
 /***/ }),
@@ -22278,10 +22278,10 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fpages%2Fitems.js!./":
-/*!*********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fpages%2Fitems.js ***!
-  \*********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fpages%2Fitems.js!./":
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fpages%2Fitems.js ***!
+  \*************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36650,7 +36650,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_Items__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Items */ "./components/Items.js");
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/pages/index.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -36692,14 +36692,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 0:
-/*!*************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fpages%2Fitems.js ***!
-  \*************************************************************************************************************************************************/
+/***/ 3:
+/*!*****************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fpages%2Fitems.js ***!
+  \*****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fpages%2Fitems.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fpages%2Fitems.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fpages%2Fitems.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fpages%2Fitems.js!./");
 
 
 /***/ }),
@@ -36715,5 +36715,5 @@ module.exports = dll_1aef2d0bbc0d334d831c;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=items.js.map

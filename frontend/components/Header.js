@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import Router from 'next/router';
 import NProgress from 'nprogress';
-
-import Nav from './Nav';
 import Cart from './Cart';
+import Nav from './Nav';
 import Search from './Search';
 
 const { default: styled, css } = require('styled-components');
@@ -61,7 +60,7 @@ const Header = () => (
     <div className="bar">
       <Logo>
         <Link href="/">
-          <a>Provision</a>
+          <a>Sick Fits +</a>
         </Link>
       </Logo>
       <Nav />

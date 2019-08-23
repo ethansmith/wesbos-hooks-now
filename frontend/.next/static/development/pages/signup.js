@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/ErrorMessage.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/ErrorMessage.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -113,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/RequestReset.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/RequestReset.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
@@ -292,7 +292,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/SignIn.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/SignIn.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
@@ -491,7 +491,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/Signup.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/Signup.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
@@ -706,7 +706,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
 
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/User.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/User.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -21290,10 +21290,10 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fpages%2Fsignup.js!./":
-/*!***********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fpages%2Fsignup.js ***!
-  \***********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fpages%2Fsignup.js!./":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fpages%2Fsignup.js ***!
+  \***************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35662,7 +35662,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Signup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Signup */ "./components/Signup.js");
 /* harmony import */ var _components_SignIn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/SignIn */ "./components/SignIn.js");
 /* harmony import */ var _components_RequestReset__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/RequestReset */ "./components/RequestReset.js");
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/pages/signup.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/pages/signup.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -35708,13 +35708,13 @@ var SignupPage = function SignupPage(props) {
 /***/ }),
 
 /***/ 2:
-/*!***************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fsignup&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fpages%2Fsignup.js ***!
-  \***************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fsignup&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fpages%2Fsignup.js ***!
+  \*******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fsignup&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fpages%2Fsignup.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks%2Ffrontend%2Fpages%2Fsignup.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fsignup&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fpages%2Fsignup.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fsignup&absolutePagePath=%2FUsers%2Fethan%2FSites%2Fwpx%2Fwesbos-hooks-now%2Ffrontend%2Fpages%2Fsignup.js!./");
 
 
 /***/ }),

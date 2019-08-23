@@ -1,9 +1,9 @@
 import gql from 'graphql-tag';
+import Head from 'next/head';
+import Link from 'next/link';
 import { Query } from 'react-apollo';
-import Head from "next/head"
-import PaginationStyles from "./styles/PaginationStyles"
-import { perPage } from "../config"
-import Link from 'next/link'
+import { perPage } from '../config';
+import PaginationStyles from './styles/PaginationStyles';
 
 const PAGINATION_QUERY = gql`
   query PAGINATION_QUERY {
@@ -30,7 +30,7 @@ const Pagination = props => (
         <PaginationStyles>
           <Head>
             <title>
-              Provision - Page {props.page} of {totalPages}{' '}
+              Sick Fits + - Page {props.page} of {totalPages}{' '}
             </title>
           </Head>
           <Link

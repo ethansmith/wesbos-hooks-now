@@ -1,1 +1,0 @@
-{"ast":null,"code":"import Items from './index';\nexport default Items;","map":{"version":3,"sources":["/Users/ethan/Sites/wpx/wesbos-hooks/frontend/pages/items.js"],"names":["Items"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,SAAlB;AAEA,eAAeA,KAAf","sourcesContent":["import Items from './index'\n\nexport default Items"]},"metadata":{},"sourceType":"module"}

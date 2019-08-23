@@ -121,7 +121,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TakeMyMoney__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./TakeMyMoney */ "./components/TakeMyMoney.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_12__);
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/Cart.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/Cart.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -274,7 +274,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/CartCount.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/CartCount.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -311,7 +311,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _lib_formatMoney__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../lib/formatMoney */ "./lib/formatMoney.js");
 /* harmony import */ var _RemoveFromCart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RemoveFromCart */ "./components/RemoveFromCart.js");
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/CartItem.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/CartItem.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -412,7 +412,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/ErrorMessage.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/ErrorMessage.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -500,10 +500,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! nprogress */ "nprogress");
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Nav */ "./components/Nav.js");
-/* harmony import */ var _Cart__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Cart */ "./components/Cart.js");
+/* harmony import */ var _Cart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Cart */ "./components/Cart.js");
+/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Nav */ "./components/Nav.js");
 /* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Search */ "./components/Search.js");
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/Header.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/Header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -542,58 +542,58 @@ const StyledHeader = styled.header.withConfig({
 const Header = () => __jsx(StyledHeader, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 60
+    lineNumber: 59
   },
   __self: undefined
 }, __jsx("div", {
   className: "bar",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 61
+    lineNumber: 60
   },
   __self: undefined
 }, __jsx(Logo, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 62
+    lineNumber: 61
   },
   __self: undefined
 }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 63
+    lineNumber: 62
   },
   __self: undefined
 }, __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 64
+    lineNumber: 63
   },
   __self: undefined
-}, "Provision"))), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_4__["default"], {
+}, "Sick Fits +"))), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 67
+    lineNumber: 66
   },
   __self: undefined
 })), __jsx("div", {
   className: "sub-bar",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 69
+    lineNumber: 68
   },
   __self: undefined
 }, __jsx(_Search__WEBPACK_IMPORTED_MODULE_6__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 70
+    lineNumber: 69
   },
   __self: undefined
-})), __jsx(_Cart__WEBPACK_IMPORTED_MODULE_5__["default"], {
+})), __jsx(_Cart__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 72
+    lineNumber: 71
   },
   __self: undefined
 }));
@@ -615,7 +615,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/Meta.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/Meta.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -664,7 +664,7 @@ const Meta = () => __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     lineNumber: 9
   },
   __self: undefined
-}, "Provision"));
+}, "Sick Fits +"));
 
 /* harmony default export */ __webpack_exports__["default"] = (Meta);
 
@@ -690,7 +690,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./User */ "./components/User.js");
 /* harmony import */ var _SignOut__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./SignOut */ "./components/SignOut.js");
 /* harmony import */ var _CartCount__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./CartCount */ "./components/CartCount.js");
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/Nav.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/Nav.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -830,7 +830,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
 /* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Meta */ "./components/Meta.js");
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/Page.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/Page.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -942,7 +942,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./User */ "./components/User.js");
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/RemoveFromCart.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/RemoveFromCart.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1041,7 +1041,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _styles_DropDown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles/DropDown */ "./components/styles/DropDown.js");
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/Search.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/Search.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -1206,7 +1206,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-apollo */ "react-apollo");
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./User */ "./components/User.js");
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/SignOut.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/SignOut.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1267,7 +1267,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/calcTotalPrice */ "./lib/calcTotalPrice.js");
 /* harmony import */ var _ErrorMessage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ErrorMessage */ "./components/ErrorMessage.js");
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./User */ "./components/User.js");
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/TakeMyMoney.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/TakeMyMoney.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1374,7 +1374,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/User.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/User.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -1565,7 +1565,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "perPage", function() { return perPage; });
 // This is client side config only - don't put anything in here that shouldn't be public!
 const LOCAL_BACKEND_URL = `http://localhost:4444`;
-const PROD_BACKEND_URL = `https://provision-backend.ethansmith.now.sh`;
+const PROD_BACKEND_URL = `https://wesbos-hooks-now-backend.ethansmith.now.sh`;
 const perPage = 4;
 
 /***/ }),
@@ -2626,7 +2626,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Page */ "./components/Page.js");
 /* harmony import */ var _lib_withData__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/withData */ "./lib/withData.js");
 
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/pages/_app.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/pages/_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 

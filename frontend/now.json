@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "provision-frontend",
+  "name": "wesbos-hooks-now-frontend",
   "builds": [
     {
       "src": "package.json",
