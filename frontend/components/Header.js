@@ -1,20 +1,22 @@
 import Link from 'next/link';
-import styled from 'styled-components';
+import Router from 'next/router';
+import NProgress from 'nprogress';
+
 import Nav from './Nav';
-import Router from  'next/router'
-import NProgress from 'nprogress'
-import Cart from './Cart'
-import Search from './Search'
+import Cart from './Cart';
+import Search from './Search';
+
+const { default: styled, css } = require('styled-components');
 
 Router.onRouteChangeStart = () => {
-    NProgress.start()
-}
+  NProgress.start();
+};
 Router.onRouteChangeComplete = () => {
-    NProgress.done()
-}
+  NProgress.done();
+};
 Router.onRouteChangeError = () => {
-    NProgress.done()
-}
+  NProgress.done();
+};
 
 const Logo = styled.h1`
   font-size: 4rem;
@@ -59,13 +61,13 @@ const Header = () => (
     <div className="bar">
       <Logo>
         <Link href="/">
-          <a>Sick Fits</a>
+          <a>Provision</a>
         </Link>
       </Logo>
       <Nav />
     </div>
     <div className="sub-bar">
-      <Search/>
+      <Search />
     </div>
     <Cart />
   </StyledHeader>

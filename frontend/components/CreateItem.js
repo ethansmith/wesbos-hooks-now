@@ -1,10 +1,71 @@
-import { Mutation } from "react-apollo"
-import gql from "graphql-tag"
-import Router from "next/router"
-import Form from "./styles/Form"
-import formatMoney from "../lib/formatMoney"
-import { useState } from "react"
-import ErrorMessage from "./ErrorMessage"
+import gql from 'graphql-tag';
+import Router from 'next/router';
+import { useEffect, useState } from 'react';
+import { Mutation } from 'react-apollo';
+import { useDropzone } from 'react-dropzone';
+import styled from 'styled-components';
+import ErrorMessage from './ErrorMessage';
+import Form from './styles/Form';
+
+const getColor = props => {
+  if (props.isDragAccept) {
+    return '#00e676';
+  }
+  if (props.isDragReject) {
+    return '#ff1744';
+  }
+  if (props.isDragActive) {
+    return '#2196f3';
+  }
+  return '#eeeeee';
+};
+
+const thumbsContainer = {
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  marginTop: 16,
+};
+
+const thumb = {
+  display: 'inline-flex',
+  borderRadius: 2,
+  border: '1px solid #eaeaea',
+  marginBottom: 8,
+  marginRight: 8,
+  width: 100,
+  height: 100,
+  padding: 4,
+  boxSizing: 'border-box',
+};
+
+const thumbInner = {
+  display: 'flex',
+  minWidth: 0,
+  overflow: 'hidden',
+};
+
+const img = {
+  display: 'block',
+  width: 'auto',
+  height: '100%',
+};
+
+const Dropzone = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-width: 2px;
+  border-radius: 2px;
+  border-color: ${props => getColor(props)};
+  border-style: dashed;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  outline: none;
+  transition: border 0.24s ease-in-out;
+`;
 
 const CREATE_ITEM_MUTATION = gql`
   mutation CREATE_ITEM_MUTATION(
@@ -24,42 +85,107 @@ const CREATE_ITEM_MUTATION = gql`
       id
     }
   }
-`
+`;
 
 const CreateItem = props => {
-  const [theTitle, setTheTitle] = useState("")
-  const [thePrice, setThePrice] = useState("")
-  const [theDescription, setTheDescription] = useState("")
-  const [theImage, setTheImage] = useState("")
-  const [theLargeImage, setTheLargeImage] = useState("")
-  const [uploading, setUploading] = useState(false)
+  const [files, setFiles] = useState([]);
+  const {
+    getRootProps,
+    getInputProps,
+    isDragActive,
+    isDragAccept,
+    isDragReject,
+  } = useDropzone({
+    accept: 'image/*',
+    onDrop: acceptedFiles => {
+      setFiles(
+        acceptedFiles.map(file =>
+          Object.assign(file, {
+            preview: URL.createObjectURL(file),
+          })
+        )
+      );
+      uploadFileToCloudinary(acceptedFiles);
+    },
+  });
 
-  const uploadFile = async e => {
-    const data = new FormData()
+  const thumbs = files.map(file => (
+    <div style={thumb} key={file.name}>
+      <div style={thumbInner}>
+        <img src={file.preview} style={img} />
+      </div>
+    </div>
+  ));
 
-    data.append("file", e.target.files[0])
-    data.append("upload_preset", "sickfits")
+  useEffect(
+    () => () => {
+      // Make sure to revoke the data uris to avoid memory leaks
+      files.forEach(file => URL.revokeObjectURL(file.preview));
+    },
+    [files]
+  );
 
-    setUploading(true)
+  const [theTitle, setTheTitle] = useState('');
+  const [thePrice, setThePrice] = useState('');
+  const [theDescription, setTheDescription] = useState('');
+  const [theImage, setTheImage] = useState('');
+  const [theLargeImage, setTheLargeImage] = useState('');
+  const [uploading, setUploading] = useState(false);
+
+  // const uploadFile = async e => {
+  //   const data = new FormData();
+
+  //   data.append('file', e.target.files[0]);
+  //   data.append('upload_preset', 'sickfits');
+
+  //   setUploading(true);
+
+  //   const res = await fetch(
+  //     'https://api.cloudinary.com/v1_1/dxegnq95q/image/upload',
+  //     {
+  //       method: 'POST',
+  //       body: data,
+  //     }
+  //   );
+
+  //   const theFile = await res.json();
+
+  //   console.log(theFile);
+
+  //   setUploading(false);
+
+  //   setTheImage(theFile.secure_url);
+
+  //   setTheLargeImage(theFile.eager[0].secure_url);
+  // };
+
+  const uploadFileToCloudinary = async files => {
+    const data = new FormData();
+
+    // TODO: accept multiple files
+    data.append('file', files[0]);
+    data.append('upload_preset', 'sickfits');
+
+    setUploading(true);
 
     const res = await fetch(
-      "https://api.cloudinary.com/v1_1/dxegnq95q/image/upload",
+      'https://api.cloudinary.com/v1_1/dxegnq95q/image/upload',
       {
-        method: "POST",
-        body: data
+        method: 'POST',
+        body: data,
       }
-    )
+    );
 
-    const theFile = await res.json()
+    const theFile = await res.json();
 
-    console.log(theFile)
+    console.log(theFile);
 
-    setUploading(false)
+    setUploading(false);
 
-    setTheImage(theFile.secure_url)
+    setTheImage(theFile.secure_url);
 
-    setTheLargeImage(theFile.eager[0].secure_url)
-  }
+    setTheLargeImage(theFile.eager[0].secure_url);
+  };
 
   return (
     <Mutation mutation={CREATE_ITEM_MUTATION}>
@@ -67,7 +193,7 @@ const CreateItem = props => {
         <Form
           onSubmit={async e => {
             // Stop the form from submitting
-            e.preventDefault()
+            e.preventDefault();
             // call the mutation
             const res = await createItem({
               variables: {
@@ -75,20 +201,20 @@ const CreateItem = props => {
                 price: parseInt(thePrice),
                 description: theDescription,
                 image: theImage,
-                largeImage: theLargeImage
-              }
-            })
+                largeImage: theLargeImage,
+              },
+            });
             // change them to the single item page
             Router.push({
-              pathname: "/item",
-              query: { id: res.data.createItem.id }
-            })
+              pathname: '/item',
+              query: { id: res.data.createItem.id },
+            });
           }}
         >
           <ErrorMessage error={error} />
 
           <fieldset disabled={loading} aria-busy={loading}>
-            <label htmlFor="file">
+            {/* <label htmlFor="file">
               Image
               <input
                 type="file"
@@ -102,7 +228,21 @@ const CreateItem = props => {
               {theImage && (
                 <img width="200" src={theImage} alt="Upload Preview" />
               )}
-            </label>
+            </label> */}
+
+            <Dropzone
+              {...getRootProps(
+                { isDragActive, isDragAccept, isDragReject },
+                { className: 'dropzone' }
+              )}
+            >
+              <input {...getInputProps()} />
+              <p>Drag 'n' drop some files here, or click to select files</p>
+            </Dropzone>
+            <aside style={thumbsContainer}>
+              {thumbs}
+              {uploading && <p>Uploading...</p>}
+            </aside>
 
             <label htmlFor="title">
               Title
@@ -147,9 +287,9 @@ const CreateItem = props => {
         </Form>
       )}
     </Mutation>
-  )
-}
+  );
+};
 
-export default CreateItem
+export default CreateItem;
 
-export { CREATE_ITEM_MUTATION }
+export { CREATE_ITEM_MUTATION };

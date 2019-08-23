@@ -1,11 +1,4 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @flow strict
- */
+// @flow strict
 
 /**
  * Given an invalid input string and a list of valid options, returns a filtered
@@ -16,13 +9,12 @@ export default function suggestionList(
   options: $ReadOnlyArray<string>,
 ): Array<string> {
   const optionsByDistance = Object.create(null);
-  const oLength = options.length;
   const inputThreshold = input.length / 2;
-  for (let i = 0; i < oLength; i++) {
-    const distance = lexicalDistance(input, options[i]);
-    const threshold = Math.max(inputThreshold, options[i].length / 2, 1);
+  for (const option of options) {
+    const distance = lexicalDistance(input, option);
+    const threshold = Math.max(inputThreshold, option.length / 2, 1);
     if (distance <= threshold) {
-      optionsByDistance[options[i]] = distance;
+      optionsByDistance[option] = distance;
     }
   }
   return Object.keys(optionsByDistance).sort(

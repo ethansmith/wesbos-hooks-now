@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -108,7 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Bruno\\Documents\\Mosh Node\\wesbos\\Advanced-React\\sick-fits\\frontend\\components\\ErrorMessage.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/ErrorMessage.js";
 
 
 
@@ -199,7 +199,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ErrorMessage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ErrorMessage */ "./components/ErrorMessage.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "C:\\Users\\Bruno\\Documents\\Mosh Node\\wesbos\\Advanced-React\\sick-fits\\frontend\\components\\SingleItem.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/components/SingleItem.js";
 
 
 function _templateObject() {
@@ -263,7 +263,7 @@ var SingleItem = function SingleItem(props) {
   }, "No Item Found for ", props.id);
   var item = data.item;
   console.log(item);
-  console.log(process.browser);
+  console.log(false);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SingleItemStyles, {
     __source: {
       fileName: _jsxFileName,
@@ -328,7 +328,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_SingleItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SingleItem */ "./components/SingleItem.js");
-var _jsxFileName = "C:\\Users\\Bruno\\Documents\\Mosh Node\\wesbos\\Advanced-React\\sick-fits\\frontend\\pages\\item.js";
+var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks/frontend/pages/item.js";
 
 
 
@@ -353,7 +353,7 @@ var Item = function Item(props) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 8:
 /*!*****************************!*\
   !*** multi ./pages/item.js ***!
   \*****************************/

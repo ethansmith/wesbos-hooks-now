@@ -1,11 +1,4 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @flow strict
- */
+// @flow strict
 
 /**
  * Produces the value of a block string from its parsed raw value, similar to
@@ -39,7 +32,9 @@ export function dedentBlockStringValue(rawString: string): string {
 }
 
 // @internal
-export function getBlockStringIndentation(lines: Array<string>): number {
+export function getBlockStringIndentation(
+  lines: $ReadOnlyArray<string>,
+): number {
   let commonIndent = null;
 
   for (let i = 1; i < lines.length; i++) {

@@ -1,4 +1,4 @@
-import Head from "next/head"
+import Head from 'next/head';
 
 const Meta = () => (
   <Head>
@@ -6,8 +6,8 @@ const Meta = () => (
     <meta charSet="utf-8" />
     <link rel="shortcut icon" href="/static/favicon.png" />
     <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
-    <title>Sick Fits!</title>
+    <title>Provision</title>
   </Head>
-)
+);
 
-export default Meta
+export default Meta;
