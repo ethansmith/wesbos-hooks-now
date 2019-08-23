@@ -1,10 +1,10 @@
+import { Grommet, grommet as grommetTheme } from 'grommet';
 import App, { Container } from 'next/app';
 import { ApolloProvider } from 'react-apollo';
 // import { ApolloProvider } from '@apollo/react-hooks'
+// Leave react-apollo-hooks active for now, until I figure out how to get props to propagate down with react-apollo, instead
 import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
-import { Grommet, grommet as grommetTheme } from 'grommet';
 import Page from '../components/Page';
-
 import withData from '../lib/withData';
 
 class MyApp extends App {

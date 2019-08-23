@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "hooks-backend",
+  "builds": [{ "src": "src/index.js", "use": "@now/node-server" }],
+  "routes": [{ "src": "/.*", "dest": "src/index.js" }],
+  "env": {
+    "FRONTEND_URL": "https://hooks-frontend.ethansmith.now.sh",
+    "PRISMA_ENDPOINT": "https://hooks-prod-67ab883197.herokuapp.com/hooks-prod/default",
+    "PRISMA_SECRET": "prismatic123"
+  }
+}
