@@ -23,3 +23,12 @@ MAIL_PORT=###
 MAIL_USER="###"
 MAIL_PASS="###"
 ```
+
+You'll also need to set a few Now.sh secrets to match these lines in `/backend/now.json`:
+
+```
+    "PRISMA_SECRET": "@hooks_prisma_secret",
+    "APP_SECRET": "@hooks_app_secret",
+```
+
+You may change these to `@whatever_you_like` as long as what's listed in this file matches the name of the secret you create (e.g. `now secret add whatever_you_like yoursupersecuresecret`).
