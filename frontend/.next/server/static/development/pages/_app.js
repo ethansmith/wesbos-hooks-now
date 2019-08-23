@@ -1565,7 +1565,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "perPage", function() { return perPage; });
 // This is client side config only - don't put anything in here that shouldn't be public!
 const LOCAL_BACKEND_URL = `http://localhost:4444`;
-const PROD_BACKEND_URL = `https://hooks-backend.ethansmith.now.sh`;
+const PROD_BACKEND_URL = `https://provision-backend.ethansmith.now.sh`;
 const perPage = 4;
 
 /***/ }),

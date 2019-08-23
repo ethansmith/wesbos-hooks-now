@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "hooks-frontend",
+  "name": "provision-frontend",
   "builds": [
     {
       "src": "package.json",
