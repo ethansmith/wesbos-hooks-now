@@ -4,7 +4,7 @@ This is a WIP learning project, based on Wes Bos' Advanced React course and incl
 
 Everything pushed to the `master` branch should work in development and production environments. In my setup the Prisma database is deployed on Heroku, the `/backend` folder is deployed via a Now.sh project, and the `/frontend` folder is deployed in a separate Now.sh project.
 
-My deployed frontend is [available here](https://wesbos-hooks-now-frontend.ethansmith.now.sh). This should always be sync'd with the `master` branch of this repo and may or may not work for you. Note that it may take a moment to spin everything up if it hasn't been accessed in a while. If it is working, feel free to create an account, poke around, add an item, etc.
+My deployed frontend is [available here](https://wesbos-hooks-now-frontend.ethansmith.now.sh). This should always be sync'd with the `master` branch of this repo and may or may not work for you. Note that it may take a moment to spin everything up if it hasn't been accessed in a while. If it is working, feel free to create an account, poke around, add an item, etc. **In case it's not obvious, there's nothing about this project that's refined or production-ready ;)**
 
 _If you're attempting to deploy this on your own, you'll need to do a few things:_
 
