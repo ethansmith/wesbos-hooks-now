@@ -30,7 +30,7 @@ _If you're attempting to deploy this on your own, you'll need to do a few things
    MAIL_PASS="###"
    ```
 
-5. Set a few Now.sh secrets to match these lines in `/backend/now.json`:
+5. Edit the config file for the Now backend, `/backend/now.json`, replacing values with your own. I've used Now secrets to keep sensitive info out of this repo, including:
 
    ```
    "PRISMA_SECRET": "@hooks_prisma_secret",

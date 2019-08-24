@@ -45,6 +45,5 @@ server.start(
   },
   deets => {
     console.log(`Server is now running on port http://localhost:${deets.port}`);
-    console.log(process.env.NODE_ENV);
   }
 );
