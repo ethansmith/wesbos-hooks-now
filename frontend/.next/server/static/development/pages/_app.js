@@ -397,92 +397,6 @@ const CartItem = props => {
 
 /***/ }),
 
-/***/ "./components/ErrorMessage.js":
-/*!************************************!*\
-  !*** ./components/ErrorMessage.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/ErrorMessage.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-const ErrorStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "ErrorMessage__ErrorStyles",
-  componentId: "sc-11u5fgj-0"
-})(["padding:2rem;background:white;margin:2rem 0;border:1px solid rgba(0,0,0,0.05);border-left:5px solid red;p{margin:0;font-weight:100;}strong{margin-right:1rem;}"]);
-
-const DisplayError = ({
-  error
-}) => {
-  if (!error || !error.message) return null;
-
-  if (error.networkError && error.networkError.result && error.networkError.result.errors.length) {
-    return error.networkError.result.errors.map((error, i) => __jsx(ErrorStyles, {
-      key: i,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: undefined
-    }, __jsx("p", {
-      "data-test": "graphql-error",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 26
-      },
-      __self: undefined
-    }, __jsx("strong", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27
-      },
-      __self: undefined
-    }, "Shoot!"), error.message.replace('GraphQL error: ', ''))));
-  }
-
-  return __jsx(ErrorStyles, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: undefined
-  }, __jsx("p", {
-    "data-test": "graphql-error",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: undefined
-  }, __jsx("strong", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: undefined
-  }, "Shoot!"), error.message.replace('GraphQL error: ', '')));
-};
-
-DisplayError.defaultProps = {
-  error: {}
-};
-DisplayError.propTypes = {
-  error: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (DisplayError);
-
-/***/ }),
-
 /***/ "./components/Header.js":
 /*!******************************!*\
   !*** ./components/Header.js ***!
@@ -1254,19 +1168,18 @@ const SignOut = props => __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Mutati
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_stripe_checkout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-stripe-checkout */ "react-stripe-checkout");
-/* harmony import */ var react_stripe_checkout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-apollo */ "react-apollo");
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! nprogress */ "nprogress");
-/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! nprogress */ "nprogress");
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_stripe_checkout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-stripe-checkout */ "react-stripe-checkout");
+/* harmony import */ var react_stripe_checkout__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/calcTotalPrice */ "./lib/calcTotalPrice.js");
-/* harmony import */ var _ErrorMessage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ErrorMessage */ "./components/ErrorMessage.js");
-/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./User */ "./components/User.js");
+/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./User */ "./components/User.js");
 var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/TakeMyMoney.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -1277,8 +1190,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-const CREATE_ORDER_MUTATION = graphql_tag__WEBPACK_IMPORTED_MODULE_5___default.a`
+const CREATE_ORDER_MUTATION = graphql_tag__WEBPACK_IMPORTED_MODULE_1___default.a`
   mutation CREATE_ORDER_MUTATION($token: String!) {
     createOrder(token: $token) {
       id
@@ -1296,7 +1208,7 @@ const TakeMyMoney = props => {
   const totalItems = me => me.cart.reduce((tally, cartItem) => tally + cartItem.quantity, 0);
 
   const onToken = async (res, createOrder) => {
-    nprogress__WEBPACK_IMPORTED_MODULE_4___default.a.start(); // manually call the mutation once we have the stripe token
+    nprogress__WEBPACK_IMPORTED_MODULE_3___default.a.start(); // manually call the mutation once we have the stripe token
 
     const order = await createOrder({
       variables: {
@@ -1305,7 +1217,7 @@ const TakeMyMoney = props => {
     }).catch(err => {
       alert(err.message);
     });
-    next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push({
+    next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push({
       pathname: '/order',
       query: {
         id: order.data.createOrder.id
@@ -1313,38 +1225,38 @@ const TakeMyMoney = props => {
     });
   };
 
-  return __jsx(_User__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  return __jsx(_User__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 46
     },
     __self: undefined
   }, ({
     data: {
       me
     }
-  }) => __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_2__["Mutation"], {
+  }) => __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_4__["Mutation"], {
     mutation: CREATE_ORDER_MUTATION,
     refetchQueries: [{
-      query: _User__WEBPACK_IMPORTED_MODULE_8__["CURRENT_USER_QUERY"]
+      query: _User__WEBPACK_IMPORTED_MODULE_7__["CURRENT_USER_QUERY"]
     }],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 48
     },
     __self: undefined
-  }, createOrder => __jsx(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, createOrder => __jsx(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_5___default.a, {
     amount: Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_6__["default"])(me.cart),
     name: "Sick Fits",
     description: `Your order of ${totalItems(me)} items`,
-    stripeKey: "pk_test_s5G4igMtK9KvmQtbRd0L18yR00ALa4imnQ",
+    stripeKey: "pk_test_PkButKb8kGlsoCoMKm6UBcjY00fxG82fbX",
     image: me.cart.length && me.cart[0].item && me.cart[0].item.image,
     currency: "USD",
     email: me.email,
     token: res => onToken(res, createOrder),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 53
     },
     __self: undefined
   }, props.children)));

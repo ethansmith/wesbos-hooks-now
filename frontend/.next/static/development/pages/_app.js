@@ -326,92 +326,6 @@ var CartItem = function CartItem(props) {
 
 /***/ }),
 
-/***/ "./components/ErrorMessage.js":
-/*!************************************!*\
-  !*** ./components/ErrorMessage.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/ethan/Sites/wpx/wesbos-hooks-now/frontend/components/ErrorMessage.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-var ErrorStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "ErrorMessage__ErrorStyles",
-  componentId: "sc-11u5fgj-0"
-})(["padding:2rem;background:white;margin:2rem 0;border:1px solid rgba(0,0,0,0.05);border-left:5px solid red;p{margin:0;font-weight:100;}strong{margin-right:1rem;}"]);
-
-var DisplayError = function DisplayError(_ref) {
-  var error = _ref.error;
-  if (!error || !error.message) return null;
-
-  if (error.networkError && error.networkError.result && error.networkError.result.errors.length) {
-    return error.networkError.result.errors.map(function (error, i) {
-      return __jsx(ErrorStyles, {
-        key: i,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25
-        },
-        __self: this
-      }, __jsx("p", {
-        "data-test": "graphql-error",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        },
-        __self: this
-      }, __jsx("strong", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27
-        },
-        __self: this
-      }, "Shoot!"), error.message.replace('GraphQL error: ', '')));
-    });
-  }
-
-  return __jsx(ErrorStyles, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx("p", {
-    "data-test": "graphql-error",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, __jsx("strong", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, "Shoot!"), error.message.replace('GraphQL error: ', '')));
-};
-
-DisplayError.defaultProps = {
-  error: {}
-};
-DisplayError.propTypes = {
-  error: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (DisplayError);
-
-/***/ }),
-
 /***/ "./components/Header.js":
 /*!******************************!*\
   !*** ./components/Header.js ***!
@@ -1250,18 +1164,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_stripe_checkout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-stripe-checkout */ "./node_modules/react-stripe-checkout/dist/main.js");
-/* harmony import */ var react_stripe_checkout__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-apollo */ "./node_modules/react-apollo/react-apollo.esm.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogress.js");
-/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogress.js");
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-apollo */ "./node_modules/react-apollo/react-apollo.esm.js");
+/* harmony import */ var react_stripe_checkout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-stripe-checkout */ "./node_modules/react-stripe-checkout/dist/main.js");
+/* harmony import */ var react_stripe_checkout__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../lib/calcTotalPrice */ "./lib/calcTotalPrice.js");
-/* harmony import */ var _ErrorMessage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ErrorMessage */ "./components/ErrorMessage.js");
-/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./User */ "./components/User.js");
+/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./User */ "./components/User.js");
 
 
 
@@ -1286,8 +1199,7 @@ function _templateObject() {
 
 
 
-
-var CREATE_ORDER_MUTATION = graphql_tag__WEBPACK_IMPORTED_MODULE_8___default()(_templateObject());
+var CREATE_ORDER_MUTATION = graphql_tag__WEBPACK_IMPORTED_MODULE_4___default()(_templateObject());
 
 var TakeMyMoney = function TakeMyMoney(props) {
   var totalItems = function totalItems(me) {
@@ -1307,7 +1219,7 @@ var TakeMyMoney = function TakeMyMoney(props) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              nprogress__WEBPACK_IMPORTED_MODULE_7___default.a.start(); // manually call the mutation once we have the stripe token
+              nprogress__WEBPACK_IMPORTED_MODULE_6___default.a.start(); // manually call the mutation once we have the stripe token
 
               _context.next = 3;
               return createOrder({
@@ -1320,7 +1232,7 @@ var TakeMyMoney = function TakeMyMoney(props) {
 
             case 3:
               order = _context.sent;
-              next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push({
+              next_router__WEBPACK_IMPORTED_MODULE_5___default.a.push({
                 pathname: '/order',
                 query: {
                   id: order.data.createOrder.id
@@ -1340,30 +1252,30 @@ var TakeMyMoney = function TakeMyMoney(props) {
     };
   }();
 
-  return __jsx(_User__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  return __jsx(_User__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 46
     },
     __self: this
   }, function (_ref2) {
     var me = _ref2.data.me;
-    return __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_5__["Mutation"], {
+    return __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_7__["Mutation"], {
       mutation: CREATE_ORDER_MUTATION,
       refetchQueries: [{
-        query: _User__WEBPACK_IMPORTED_MODULE_11__["CURRENT_USER_QUERY"]
+        query: _User__WEBPACK_IMPORTED_MODULE_10__["CURRENT_USER_QUERY"]
       }],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 48
       },
       __self: this
     }, function (createOrder) {
-      return __jsx(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      return __jsx(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_8___default.a, {
         amount: Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_9__["default"])(me.cart),
         name: "Sick Fits",
         description: "Your order of ".concat(totalItems(me), " items"),
-        stripeKey: "pk_test_s5G4igMtK9KvmQtbRd0L18yR00ALa4imnQ",
+        stripeKey: "pk_test_PkButKb8kGlsoCoMKm6UBcjY00fxG82fbX",
         image: me.cart.length && me.cart[0].item && me.cart[0].item.image,
         currency: "USD",
         email: me.email,
@@ -1372,7 +1284,7 @@ var TakeMyMoney = function TakeMyMoney(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 53
         },
         __self: this
       }, props.children);

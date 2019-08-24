@@ -9,11 +9,11 @@
     "PRISMA_ENDPOINT": "https://hooks-prod-67ab883197.herokuapp.com/hooks-prod/default",
     "PRISMA_SECRET": "@hooks_prisma_secret",
     "APP_SECRET": "@hooks_app_secret",
-    "STRIPE_SECRET": "sk_test_Lk8SF6kjaZKNRsfGkAt2RlAn00XfUMsYGX",
+    "STRIPE_SECRET": "@hooks_stripe_secret",
     "PORT": "4444",
     "MAIL_HOST": "smtp.mailtrap.io",
     "MAIL_PORT": "2525",
-    "MAIL_USER": "cffffafd2adfb7",
-    "MAIL_PASS": "693ff9d66cb3d9"
+    "MAIL_USER": "33a53bbe5aa72e",
+    "MAIL_PASS": "833b20978c153d"
   }
 }

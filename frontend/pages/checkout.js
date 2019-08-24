@@ -1,6 +1,6 @@
-import { Elements, StripeProvider } from "react-stripe-elements-universal"
-import CheckoutForm from "../components/CheckoutForm"
-import Head from "next/head"
+import Head from 'next/head';
+import { Elements, StripeProvider } from 'react-stripe-elements-universal';
+import CheckoutForm from '../components/CheckoutForm';
 
 const CheckoutPage = props => (
   <>
@@ -9,12 +9,12 @@ const CheckoutPage = props => (
       <script src="https://js.stripe.com/v3/" async />
     </Head>
 
-    <StripeProvider apiKey="pk_test_s5G4igMtK9KvmQtbRd0L18yR00ALa4imnQ">
+    <StripeProvider apiKey="pk_test_PkButKb8kGlsoCoMKm6UBcjY00fxG82fbX">
       <Elements>
         <CheckoutForm />
       </Elements>
     </StripeProvider>
   </>
-)
+);
 
-export default CheckoutPage
+export default CheckoutPage;
