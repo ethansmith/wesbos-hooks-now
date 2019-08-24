@@ -13,7 +13,7 @@
     "PORT": "4444",
     "MAIL_HOST": "smtp.mailtrap.io",
     "MAIL_PORT": "2525",
-    "MAIL_USER": "33a53bbe5aa72e",
-    "MAIL_PASS": "833b20978c153d"
+    "MAIL_USER": "@hooks_mail_user",
+    "MAIL_PASS": "@hooks_mail_password"
   }
 }
