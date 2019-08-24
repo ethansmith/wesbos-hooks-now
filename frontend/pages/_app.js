@@ -1,4 +1,3 @@
-import { Grommet, grommet as grommetTheme } from 'grommet';
 import App, { Container } from 'next/app';
 import { ApolloProvider } from 'react-apollo';
 // import { ApolloProvider } from '@apollo/react-hooks'
@@ -28,11 +27,9 @@ class MyApp extends App {
       <Container>
         <ApolloProvider client={apollo}>
           <ApolloHooksProvider client={apollo}>
-            <Grommet theme={grommetTheme}>
-              <Page>
-                <Component {...pageProps} />
-              </Page>
-            </Grommet>
+            <Page>
+              <Component {...pageProps} />
+            </Page>
           </ApolloHooksProvider>
         </ApolloProvider>
       </Container>
